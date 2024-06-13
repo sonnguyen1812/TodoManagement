@@ -1,0 +1,24 @@
+<div pb-5>
+    <div class="flex justify-center flex-wrap gap-5">
+        @for(item of tasks; track 1) {
+            <app-task-card/>
+            <app-task-card/>
+            <app-task-card/>
+            <app-task-card/>
+        }
+    
+        @empty {
+            <div>
+                No tasks available
+            </div>
+        }
+    </div>
+
+    <div class="fixed bottom-10 right-10">
+        <div class="example-button-container">
+            <button (click)="handleOpenCreateTaskForm()" mat-fab color="primary" aria-label="Example icon button with a home icon">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+    </div>
+</div>

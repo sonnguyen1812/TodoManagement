@@ -1,0 +1,70 @@
+<div class="flex justify-center h-screen items-center overflow-hidden">
+
+    <div class="container">
+
+        <div class="cover" [ngClass]="{'route-active': isRegister}">
+
+            <div class="front">
+                <div>
+
+                </div>
+                <div class="text">
+
+                    <span class="text-1">
+                        Quản lý công việc
+                    </span>
+                </div>
+            </div>
+            <div class="back">
+
+            </div>
+        </div>
+        <div class="form h-full">
+            <div class="form-content h-full">
+                <div class="login-form">
+                    <h1 class="text-lg font-bold text-center pb-8">Đăng kí</h1>
+
+                    <form (ngSubmit)="onSubmit()" class="w-[27rem] p-6 rounded-lg shadow-md">
+                        <div class="mb-4">
+                          <mat-form-field class="w-full">
+                            <mat-label class="text-200">Tiêu đề</mat-label>
+                            <input
+                              matInput
+                              placeholder="điền..."
+                              value=""
+                              name="title"
+                              [(ngModel)]="taskItem.title"
+                              class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline"
+                            />
+                          </mat-form-field>
+                        </div>
+                      
+                        <div class="mb-4">
+                          <mat-form-field class="w-full">
+                            <mat-label class="text-200">Mô tả</mat-label>
+                            <input
+                              matInput
+                              placeholder="Description..."
+                              value=""
+                              name="description"
+                              [(ngModel)]="taskItem.description"
+                              class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline"
+                            />
+                          </mat-form-field>
+                        </div>
+                      
+                        
+                      
+                        <div>
+                          <button  mat-flat-button color="primary" type="submit">
+                              Create 
+                          </button>
+                        </div>
+                      </form>
+                      
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

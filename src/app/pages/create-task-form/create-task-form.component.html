@@ -1,0 +1,45 @@
+<form (ngSubmit)="onSubmit()" class="w-[27rem] p-6 rounded-lg shadow-md">
+  <div class="mb-4">
+    <mat-form-field class="w-full">
+      <mat-label class="text-200">Tiêu đề</mat-label>
+      <input
+        matInput
+        placeholder="điền..."
+        value=""
+        name="title"
+        [(ngModel)]="taskItem.title"
+        class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline"
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="mb-4">
+    <mat-form-field class="w-full">
+      <mat-label class="text-200">Mô tả</mat-label>
+      <input
+        matInput
+        placeholder="Description..."
+        value=""
+        name="description"
+        [(ngModel)]="taskItem.description"
+        class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline"
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="mb-4">
+      <mat-radio-group
+        [(ngModel)]="taskItem.prioritize"
+        aria-label="Select an option"
+      >
+        <mat-radio-button value="1">Ưu tiên</mat-radio-button>
+      </mat-radio-group>
+  </div>
+
+  <div>
+    <button  mat-flat-button color="primary" type="submit">
+        Create 
+    </button>
+  </div>
+</form>
+
